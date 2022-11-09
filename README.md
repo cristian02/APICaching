@@ -1,14 +1,22 @@
 # API Caching with Redis 
 
-This example was create using .Net Core 6
+This example was create using .Net Core 6. 
+Note: We're using a docker container to run redis. 
 
 <p>Commands executed</p>
 <ol>
   <li>dotnet --version </li> Check out your dotnet version 
   <li>dotnet new webapi -n "APIname" </li> Create a project type webapi, don't forget replace APIname
   <li>dotnet build </li> To build your project 
-  
-
+  <li>docker run --name my-redis -p 49153:6379 -d redis</li> Create redis instance at docker 
+  <li>dotnet add package Microsoft.EntityFrameworkCore</li> Include Entity Framework Core
+  <li>dotnet add package Microsoft.EntityFrameworkCore.SqlServer</li> Include Microsoft.EntityFrameworkCore.SqlServer 
+  <li>dotnet add package Microsoft.EntityFrameworkCore.Design</li> Include Microsoft.EntityFrameworkCore.Desing
+  <li>dotnet add package Microsoft.EntityFrameworkCore.Tools</li>Include Microsoft.EntityFrameworkCore.Tools
+  <li>dotnet add package StackExchange.Redis</li> Include StackExchange.Redis
+  <li>dotnet add package Microsoft.Extensions.Caching.StackExchangeRedis</li> Include Microsoft.Extensions.Caching.StackExchangeRedis
+  <li>dotnet ef migrations add (description)</li>
+  <li>dotnet ef database update</li>
 </ol>
 
 <!-- CONTACT -->
