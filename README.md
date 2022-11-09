@@ -19,6 +19,10 @@ Note: We're using a docker container to run redis.
   <li>dotnet ef database update</li>
 </ol>
 
+Look out this command
+dotnet ef dbcontext scaffold "Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+
 <!-- CONTACT -->
 ## Contact
 Cristian Martínez Hernández 
